@@ -1,4 +1,4 @@
-import { Box, Text, Heading, HStack, IconButton, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, useToast, VStack, Button } from '@chakra-ui/react'
+import { Box, Text, Heading, HStack, IconButton, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, VStack, Button } from '@chakra-ui/react'
 import { useState } from 'react'
 import { DeleteIcon, EditIcon } from '@chakra-ui/icons';
 import { useProjectStore } from '../store/project.js';
@@ -8,7 +8,7 @@ const ProjectCard = ({project}) => {
 
     const [ updatedProject, setUpdateProject ] = useState(project);
     const { deleteProject, updateProject } = useProjectStore();
-    const toast = useToast();
+    // const toast = useToast();
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     const handleDeleteProject = async (pid) => {
